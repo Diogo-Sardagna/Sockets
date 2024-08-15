@@ -103,13 +103,14 @@ public class Servidor {
             }
 
             String cpf = parts[1];
-            String nome = parts[2];
-            String endereco = parts[3];
             
             // Verificar se o CPF já está cadastrado
             if (pessoas.containsKey(cpf)) {
                 return "CPF já cadastrado!";
             }
+            
+            String nome = parts[2];
+            String endereco = parts[3];
             
             if (parts.length == 5) { // Administrador
                 String setorResponsavel = parts[4];
